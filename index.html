@@ -24,15 +24,26 @@
 <body>
     <div class="container">
         <h1>Welcome to GitHub Pages with Adaptive Design</h1>
-        <div class="icon">
-            <a href="https://www.example1.com"><img src="icon1.png" alt="Icon 1"></a>
-        </div>
-        <div class="icon">
-            <a href="https://www.example2.com"><img src="icon2.png" alt="Icon 2"></a>
-        </div>
-        <div class="icon">
-            <a href="https://www.example3.com"><img src="icon3.png" alt="Icon 3"></a>
-        </div>
+        <div id="icons-container"></div>
     </div>
+
+    <script>
+        fetch('links.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('icons-container');
+                data.forEach(item => {
+                    const iconDiv = document.createElement('div');
+                    const link = document.createElement('a');
+                    const icon = document.createElement('img');
+                    icon.src = item.icon;
+                    icon.alt = item.alt;
+                    link.href = item.url;
+                    link.appendChild(icon);
+                    iconDiv.appendChild(link);
+                    container.appendChild(iconDiv);
+                });
+            });
+    </script>
 </body>
 </html>
