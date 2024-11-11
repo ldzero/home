@@ -1,17 +1,10 @@
 [
-    {
-        "url": "https://www.example1.com",
-        "icon": "icon1.png",
-        "alt": "Icon 1"
-    },
-    {
-        "url": "https://www.example2.com",
-        "icon": "icon2.png",
-        "alt": "Icon 2"
-    },
-    {
-        "url": "https://www.example3.com",
-        "icon": "icon3.png",
-        "alt": "Icon 3"
-    }
+  {
+    "text": "Example Link 1",
+    "url": "https://example.com/link1"
+  },
+  {
+    "text": "Example Link 2",
+    "url": "https://example.com/link2"
+  }
 ]
